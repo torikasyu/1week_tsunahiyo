@@ -1,4 +1,5 @@
 /Assets/NCMB/*
+!/Assets/NCMB/Readme.txt
 
 # rcov generated
 coverage
