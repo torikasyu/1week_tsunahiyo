@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class GameManager : torikasyu.SingletonMonoBehaviour<GameManager>
 {
     public AudioClip[] clips;
+
     AudioSource audio;
     public int TopLimitPos { get; set; } = 4;
     public int BottomLimitPos { get; set; } = -4;
@@ -51,6 +52,8 @@ public class GameManager : torikasyu.SingletonMonoBehaviour<GameManager>
         gameState = enumGameState.None;
         nextGameState = enumGameState.WaitforStart;
         audio = GetComponent<AudioSource>();
+        audio.Play();
+
     }
 
     public void PlaySound(int type)
@@ -88,7 +91,7 @@ public class GameManager : torikasyu.SingletonMonoBehaviour<GameManager>
         {
             level++;
             //SpawnDistance -= 1f;
-            EnemyBlockSpeed += 0.1f;
+            EnemyBlockSpeed += 0.15f;
         }
 
         ScoreText.text = "SCORE<br>" + score.ToString();
@@ -195,13 +198,23 @@ public class GameManager : torikasyu.SingletonMonoBehaviour<GameManager>
 
     bool CheckDict(Dictionary<int, int> d)
     {
+        int dummyCount = 3;
+        if (level < 10)
+        {
+            dummyCount = 5;
+        }
+        else if (level < 20)
+        {
+            dummyCount = 4;
+        }
+
         int cnt = 0;
         foreach (KeyValuePair<int, int> p in d)
         {
             if (p.Value == 0) cnt++;
         }
 
-        return cnt <= 3;    //ダミーブロックが3個以下
+        return cnt <= dummyCount;    //ダミーブロックが3個以下
     }
 
     void BlockSpawn()

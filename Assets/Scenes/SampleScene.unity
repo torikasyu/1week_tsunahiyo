@@ -148,6 +148,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c1ef8163cba6c44e8af0e7ea5afd1c12, type: 3}
   - {fileID: 8300000, guid: 46d42291932ad4af5ae8949f143e5bdc, type: 3}
   - {fileID: 8300000, guid: 1b6de5de61e3c48dca4825eb90d87ee7, type: 3}
+  - {fileID: 8300000, guid: a4d70b72cebb44f0293e05858650ae5b, type: 3}
+  - {fileID: 8300000, guid: 180edeef681af4c3b9206a470f77e2b8, type: 3}
   enemyA: {fileID: 3782868495201335417, guid: 5361ac1fe8280435e83436dd9a40fe5e, type: 3}
   DummyBlock: {fileID: 8713780665986901273, guid: a476d8220e74547219fcb14b9c64395e,
     type: 3}
@@ -185,11 +187,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: a4d70b72cebb44f0293e05858650ae5b, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1658,8 +1660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cce9f462cbd54512a9cbcde9b713e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationKey: 44ff603107b933833919ceb4113521fe1a6ba7374299d8a3e72bca23cd2b9f8e
-  clientKey: c61a0ff4d984905d82b846c8a1e3993dd9a392c4f6a6994d187ba3b9a469d41b
+  applicationKey: 3b0e8fd9a45c4f6e468abb2064a2be659d50348d8f58d598eba27ba8cab737f7
+  clientKey: a954d397655fa429a25768bfcaf4877d71e73a0f7e4b8c85bb3ed2fac7e385ce
   usePush: 0
   useAnalytics: 0
   responseValidation: 0
