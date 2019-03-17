@@ -156,7 +156,7 @@ public class GameManager : torikasyu.SingletonMonoBehaviour<GameManager>
 
                 TweetButton.gameObject.SetActive(false);
                 InfoText.gameObject.SetActive(true);
-                InfoText.text = "<color=yellow>TSUNAHIYO</color><br><br>HIT ENTER KEY TO START";
+                InfoText.text = "<color=yellow>TSUNAHIYO</color><br><br>HIT ENTER KEY TO START<br><br>UP / DOWN<br>SPACE : Shoot";
                 ScoreText.text = "SCORE<br>" + score.ToString();
                 LevelText.text = "LEVEL<br>" + level.ToString();
                 HighScoreText.text = "<color=red>HIGH<br> SCORE</color><br>" + highScore.ToString();
