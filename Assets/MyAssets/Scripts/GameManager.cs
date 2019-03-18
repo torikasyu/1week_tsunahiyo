@@ -170,8 +170,8 @@ public class GameManager : torikasyu.SingletonMonoBehaviour<GameManager>
             case enumGameState.GameOver:
                 PlaySound(2);
                 string highScroreMsg = "GAME OVER";
-                int high = PlayerPrefs.GetInt("highscore");
-                if (high < score)
+                //int high = PlayerPrefs.GetInt("highscore");
+                if (highScore < score)
                 {
                     PlayerPrefs.SetInt("highscore", score);
                     PlayerPrefs.Save();

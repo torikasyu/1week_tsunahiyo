@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     {
         posY = transform.position.y;
 
-        if (canMove)
+        if (canMove && !isDead)
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (canShoot())
+        if (canShoot() && !isDead)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
