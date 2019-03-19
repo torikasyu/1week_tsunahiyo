@@ -201,14 +201,29 @@ public class GameManager : torikasyu.SingletonMonoBehaviour<GameManager>
 
     bool CheckDict(Dictionary<int, int> d)
     {
-        if (level < 10)
+        if (level == 1)
         {
-            dummyCountMax = 5;
+            dummyCountMax = 1;
+            dummyCountMin = 1;
+        }
+        else if (level == 2)
+        {
+            dummyCountMax = 2;
             dummyCountMin = 2;
+        }
+        else if (level < 5)
+        {
+            dummyCountMax = 3;
+            dummyCountMin = 3;
+        }
+        else if (level < 10)
+        {
+            dummyCountMax = 4;
+            dummyCountMin = 1;
         }
         else if (level < 20)
         {
-            dummyCountMax = 4;
+            dummyCountMax = 3;
             dummyCountMin = 1;
         }
         else
