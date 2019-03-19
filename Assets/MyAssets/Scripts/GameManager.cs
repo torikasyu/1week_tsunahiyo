@@ -196,16 +196,25 @@ public class GameManager : torikasyu.SingletonMonoBehaviour<GameManager>
         }
     }
 
+    int dummyCountMax = 3;
+    int dummyCountMin = 0;
+
     bool CheckDict(Dictionary<int, int> d)
     {
-        int dummyCount = 3;
         if (level < 10)
         {
-            dummyCount = 5;
+            dummyCountMax = 5;
+            dummyCountMin = 2;
         }
         else if (level < 20)
         {
-            dummyCount = 4;
+            dummyCountMax = 4;
+            dummyCountMin = 1;
+        }
+        else
+        {
+            dummyCountMax = 3;
+            dummyCountMin = 0;
         }
 
         int cnt = 0;
@@ -214,7 +223,7 @@ public class GameManager : torikasyu.SingletonMonoBehaviour<GameManager>
             if (p.Value == 0) cnt++;
         }
 
-        return cnt <= dummyCount;    //ダミーブロックが3個以下
+        return dummyCountMin <= cnt && cnt <= dummyCountMax;
     }
 
     void BlockSpawn()
