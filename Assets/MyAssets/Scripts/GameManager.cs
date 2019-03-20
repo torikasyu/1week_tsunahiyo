@@ -11,7 +11,7 @@ public class GameManager : torikasyu.SingletonMonoBehaviour<GameManager>
     public int BottomLimitPos { get; set; } = -4;
 
     public float RightLimitPos { get; set; } = 10f;
-    public float LefLimitPos { get; set; } = -10f;
+    public float LeftLimitPos { get; set; } = -10f;
 
     public float EnemyBlockSpeed { get; set; } = 2f;
     public float ShootBlockSpeed { get; set; } = 15f;

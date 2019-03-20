@@ -20,7 +20,7 @@ public class BlockParent : MonoBehaviour
     {
         speed = GameManager.Instance.EnemyBlockSpeed;
 
-        if (pos.x < GameManager.Instance.LefLimitPos) Destroy(gameObject);
+        if (pos.x < GameManager.Instance.LeftLimitPos) Destroy(gameObject);
 
         if (!isDestroyCommanded)
         {
