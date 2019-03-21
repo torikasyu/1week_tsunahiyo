@@ -102,15 +102,12 @@ public class GameManager : torikasyu.SingletonMonoBehaviour<GameManager>
             float currentSpeed = EnemyBlockSpeed;
             EnemyBlockSpeed = 0;
             StartCoroutine(SetSpeed(currentSpeed));
-            //isRunning = false;
         }
     }
 
     IEnumerator SetSpeed(float speed)
     {
-        //if (isRunning) { yield break; }
         isRunning = true;
-
         yield return new WaitForSeconds(1f);
         EnemyBlockSpeed = speed;
         isRunning = false;

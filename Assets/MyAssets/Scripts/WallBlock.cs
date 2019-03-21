@@ -17,7 +17,7 @@ public class WallBlock : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         currentPos = transform.position;
         scrollPosX = currentPos.x - GameManager.Instance.EnemyBlockSpeed * Time.deltaTime;
